@@ -1,7 +1,3 @@
----
-title: "gyakuten_php_4_4.md"
-tags: ""
----
 ## FizzBuzz問題を実装してみよう
 
 今回はプログラミングの基礎レベルで有名な`FizzBuzz問題`を解いてみましょう。

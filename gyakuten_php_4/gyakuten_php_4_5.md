@@ -1,8 +1,4 @@
----
-title: "gyakuten_php_4_5"
-tags: ""
----
-## foreach文
+## foreach
 
 繰り返し処理は、何度も同じ処理を繰り返したい時に使用するものです。
 
@@ -30,7 +26,7 @@ foreach($users as $name){
 ?>
 ```
 
-#### 実行結果
+実行結果
 
     Hello!! satou
     Hello!! tanaka
@@ -102,7 +98,7 @@ foreach($users as $key => $value){
 ?>
 ```
 
-#### 実行結果
+実行結果
 
     No.0はsatouです
     No.1はtanakaです
@@ -132,7 +128,7 @@ foreach($fruitesPrices as $frute => $price){
 ?>
 ```
 
-#### 実行結果
+実行結果
 
     appleの値段：150円
     bananaの値段：100円
@@ -145,7 +141,78 @@ foreach($fruitesPrices as $frute => $price){
 
 多くのプログラミング教材では`array( )`が紹介されていますが、現場では`[ ]`の方が多く使われているので`[ ]`も使ってみてください。
 
-\###まとめ
+## FizzBuzz問題の応用
+以下の使用のプログラムを実装します。
+
+難易度は少し高いので飛ばしても問題ありません。チャレンジャーの方はぜひ見て理解してください。
+
+＜仕様＞
+1から30までの整数で
+
+- 3の倍数でFizzを出力
+- 5の倍数でBuzzを出力
+- 15の倍数でFizzBuzzを出力
+- 4の倍数は出力しない（ただし、3でも割り切れる場合はFizz、5でも割り切れる場合はBuzzと出力）
+- それ以外は数字をそのまま出力する
+
+＜条件＞
+
+- forを使わない
+- rangeメソッドを使う
+
+コード
+
+````php
+<?php
+
+foreach(range(1, 30) as $num) {
+    if($num % 15 == 0) {
+        echo 'FizzBuzz'. PHP_EOL;
+    }elseif($num % 3 == 0 ){
+        echo 'Fizz'. PHP_EOL;
+    }elseif($num % 5 == 0 ){
+        echo 'Buzz'. PHP_EOL;
+    }elseif($num % 4 == 0 ){
+        continue;
+    }else{
+        echo $num. PHP_EOL;
+    }
+}
+
+?>
+```
+
+実行結果
+
+    1
+    2
+    Fizz
+    Buzz
+    Fizz
+    7
+    Fizz
+    Buzz
+    11
+    Fizz
+    13
+    14
+    FizzBuzz
+    17
+    Fizz
+    19
+    Buzz
+    Fizz
+    22
+    23
+    Fizz
+    Buzz
+    26
+    Fizz
+    29
+    FizzBuzz
+
+
+## まとめ
 `PHP`では、繰り返し処理には`foreach`をよく利用します。実際の現場でも`foreach`は`for`や`while`に比べ、かなりの頻度で登場しますのでぜひマスターしてください。
 
 ですので`for`や`while`はさらっと把握して`foreach`の重点的にマスターしてください。
