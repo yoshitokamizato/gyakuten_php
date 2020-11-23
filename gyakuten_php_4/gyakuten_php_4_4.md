@@ -19,7 +19,7 @@ $users = ["satou", "tanaka", "yamada", "shimizu"];
 
 // 配列に対してforeach文で中身を表示
 // $usersの要素１つ１つを$userに代入してブロック内の処理を実行
-foreach($users as $name){
+foreach($users as $user){
   echo "Hello!!".$user;
 }
 
